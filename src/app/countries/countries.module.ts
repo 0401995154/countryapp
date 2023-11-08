@@ -1,4 +1,5 @@
-import { RouterModule,RouterLink } from '@angular/router';
+import { SharedModule } from './../shared/shared.module';
+import { RouterModule, RouterLink } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -7,9 +8,7 @@ import { BycountryPageComponent } from './pages/bycountry-page/bycountry-page.co
 import { BycapitalPageComponent } from './pages/bycapital-page/bycapital-page.component';
 import { ByregionPageComponent } from './pages/byregion-page/byregion-page.component';
 import { CountryPageComponent } from './pages/country-page/country-page.component';
-import { PruebaComponent } from './prueba/prueba.component';
-
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { PruebaComponent } from './prueba/prueba.component';
     BycapitalPageComponent,
     ByregionPageComponent,
     CountryPageComponent,
-    PruebaComponent,
   ],
-  imports: [CommonModule, CountriesRoutingModule],
+  imports: [CommonModule, CountriesRoutingModule, SharedModule, FormsModule],
 })
 export class CountriesModule {}
