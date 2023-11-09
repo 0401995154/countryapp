@@ -1,0 +1,39 @@
+<div
+  *ngIf="countires.length == 0"
+  class="alert alert-warning text-center"
+  role="alert"
+>
+  <strong>No hay países que mostrar</strong>
+</div>
+
+<div class="table-responsive" *ngIf="countires.length > 0">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Bandera</th>
+        <th scope="col">Icon</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Población</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="" *ngFor="let item of countires; let id = index">
+        <td scope="row">{{ id + 1 }}</td>
+        <td>{{ item.flag }}</td>
+        <td>
+          <img
+            class="card-img small"
+            style="width: 25px"
+            [src]="item.flags.svg"
+            alt=""
+          />
+        </td>
+        <td>{{ item.name.common }}</td>
+        <td>{{ item.population | number }}</td>
+        <td><a href="">Ver más</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

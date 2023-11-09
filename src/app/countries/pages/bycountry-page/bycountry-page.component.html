@@ -4,15 +4,14 @@
   <div class="col">
     <!-- Busqueda -->
     <app-buscar
+      (onEvent)="mostrarPais($event)"
       placeholder="Ingrese su país"
-  
     ></app-buscar>
   </div>
 </div>
 
 <div class="row">
   <div class="col">
-    <!-- Tabla de resultados -->
-    Tabla
+    <app-table [countires]="paises"></app-table>
   </div>
 </div>

@@ -9,6 +9,7 @@ import { BycapitalPageComponent } from './pages/bycapital-page/bycapital-page.co
 import { ByregionPageComponent } from './pages/byregion-page/byregion-page.component';
 import { CountryPageComponent } from './pages/country-page/country-page.component';
 import { FormsModule } from '@angular/forms';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     BycapitalPageComponent,
     ByregionPageComponent,
     CountryPageComponent,
+    TableComponent,
   ],
   imports: [CommonModule, CountriesRoutingModule, SharedModule, FormsModule],
 })
