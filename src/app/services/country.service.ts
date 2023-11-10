@@ -29,4 +29,21 @@ export class CountryService {
       })
     );
   }
+
+  buscarRegion(query: string): Observable<Country[]> {
+    return this.http.get<Country[]>(`${this.Url}/region/${query}`).pipe(
+      catchError(() => {
+        return of([]);
+      })
+    );
+  }
+
+  //Buscar por id
+  BuscarporId(query: String): Observable<Country| any> {
+    return this.http.get<Country[]>(`${this.Url}/alpha/${query}`).pipe(
+      catchError(() => {
+        return of([]);
+      })
+    );
+  }
 }
